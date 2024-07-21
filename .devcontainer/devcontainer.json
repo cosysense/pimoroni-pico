@@ -1,0 +1,24 @@
+{
+    "name": "Pico C Development",
+    "image": "ubuntu:20.04",
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "build": {
+      "args": {
+        "PICO_SDK_PATH": "/workspace/pico/pico-sdk"
+      }
+    },
+    "postCreateCommand": "bash /workspace/install.sh",
+    "extensions": [
+      "ms-vscode.cmake-tools",
+      "twxs.cmake",
+      "marus25.cortex-debug"
+    ],
+    "mounts": [
+      "source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached"
+    ],
+    "forwardPorts": [],
+    "remoteUser": "root"
+  }
+  
